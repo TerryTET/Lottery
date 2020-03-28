@@ -16,7 +16,8 @@ import random
 
 loto = [0, 0, 0, 0, 0, 0]
 
-limits = [[3,11], [9,20], [16,28], [23,36], [32,44], [42,50]]
+#limits = [[3,11], [9,20], [16,28], [23,36], [32,44], [42,50]]
+limits = [[2,11], [9,24], [16,29], [25,37], [31,44], [39,50]]
 #limits = [[1,52], [1,52], [1,52], [1,52], [1,52], [1,52]]
 summ_min = 132
 summ_max = 183
@@ -64,11 +65,11 @@ def GenTicket(loto):
             summ = 0
                 
         pass
-
+    return summ
 
 
 # Code for Generating lottery
-#GenTicket(loto)
-#print (loto)
-#print (summ)
+summ = GenTicket(loto)
+print (loto)
+print (summ)
 

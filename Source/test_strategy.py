@@ -105,7 +105,7 @@ def TestSystem1(loto, testset):
     f4 = 0
     f5 = 0
     f6 = 0
-    for k in range(1, 1000):
+    for k in range(1, 10000):
         GenTicket(loto)
         #fres3, fres4, fres5, fres6 = SearchLotoInSet(loto, testset)
         fres3, fres4, fres5, fres6 = SearchLotoInLast10(loto, testset)
@@ -122,9 +122,9 @@ def TestSystem1(loto, testset):
     pass
 #============================================================================================
 def VirtualGame(loto, testset):
-    i = random.randint(len(testset)-20, len(testset))
+    i = random.randint(len(testset)-20, len(testset)-1)
     
-    for k in range(1, 10):
+    for k in range(0, 10):
         cnt = 0
         GenTicket(loto)
         for j in range(0, 6):
@@ -140,10 +140,10 @@ def VirtualGame(loto, testset):
 
 LoadTestSet("../TestSet/testset.csv")
 
-#TestSystem1(loto, testset)
+TestSystem1(loto, testset)
 
 #print(len(testset))
 #print(CheckOneByOne(testset))
 #print(CheckOneOverOne(testset))
 
-VirtualGame(loto, testset)
+#VirtualGame(loto, testset)
